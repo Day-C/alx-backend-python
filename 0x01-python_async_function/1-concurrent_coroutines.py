@@ -6,21 +6,6 @@ import random
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def sorter(array: list) -> list:
-    """sort an array in ascending order."""
-
-    j = 0
-    while j < len(array) - 1:
-        i = 0
-        for i in range(len(array) - 1):
-            if array[i] > array[i + 1]:
-                temp = array[i + 1]
-                array[i + 1] = array[i]
-                array[i] = temp
-        j += 1
-    return array
-
-
 async def wait_n(n: int, max_delay: int) -> list:
     """Call the wait_random function n number of times and
     return it's results in an array."""
@@ -32,4 +17,13 @@ async def wait_n(n: int, max_delay: int) -> list:
         results.append(val)
         j += 1
 
-    return sorter(results)
+    j = 0
+    while j < len(results) - 1:
+        i = 0
+        for i in range(len(results) - 1):
+            if results[i] > results[i + 1]:
+                temp = results[i + 1]
+                results[i + 1] = results[i]
+                results[i] = temp
+        j += 1
+    return (results)
