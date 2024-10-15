@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Measure time taken to execute a function."""
 import time
 import asyncio
