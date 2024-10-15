@@ -10,16 +10,16 @@ async def wait_n(n: int, max_delay: int) -> list:
     """Call the wait_random function n number of times and
     return it's results in an array."""
 
-    results = []
-    j = 0
+    results: list = []
+    j: int = 0
     while j < n:
         val = await wait_random(max_delay)
         results.append(val)
         j += 1
 
-    j = 0
+    j: int = 0
     while j < len(results) - 1:
-        i = 0
+        i: int = 0
         for i in range(len(results) - 1):
             if results[i] > results[i + 1]:
                 temp = results[i + 1]
