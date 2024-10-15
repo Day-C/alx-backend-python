@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Simple asynchronous coroutine."""
 import asyncio
 import random
