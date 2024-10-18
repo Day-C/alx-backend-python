@@ -6,20 +6,20 @@ import random
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list:
+async def wait_n(n: int, max_delay: int) -> list[float]:
     """Call the wait_random function n number of times and
     return it's results in an array."""
 
-    results: list = []
-    j: int = 0
+    results = []
+    j = 0
     while j < n:
         val = await wait_random(max_delay)
         results.append(val)
         j += 1
 
-    j: int = 0
+    j = 0
     while j < len(results) - 1:
-        i: int = 0
+        i = 0
         for i in range(len(results) - 1):
             if results[i] > results[i + 1]:
                 temp = results[i + 1]
