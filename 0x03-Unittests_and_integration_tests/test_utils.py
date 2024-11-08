@@ -10,7 +10,7 @@ from typing import (
 )
 
 
-class TestAessNestedMap(unittest.TestCase):
+class TestAccessNestedMap(unittest.TestCase):
     """Teatting utils functions and classes."""
 
     @parameterized.expand([
