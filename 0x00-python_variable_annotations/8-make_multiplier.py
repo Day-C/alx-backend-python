@@ -1,4 +1,4 @@
-#!/urs/bin/env python3
+#!/usr/bin/env python3
 '''Return a function that multiplies a float.'''
 from typing import Callable
 
