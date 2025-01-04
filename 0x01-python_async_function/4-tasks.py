@@ -11,7 +11,7 @@ async def task_wait_n(n: int, max_delay: int) -> List:
     """Call the wait_random function n number of times and
     return it's results in an array."""
 
-    results: list = []
+    results: List = []
     j: int = 0
     while j < n:
         val = await wait_random(max_delay)
