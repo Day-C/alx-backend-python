@@ -2,11 +2,12 @@
 """import another async function."""
 import asyncio
 import random
+from typing import List
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """Call the wait_random function n number of times and
     return it's results in an array."""
 
